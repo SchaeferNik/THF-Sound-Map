@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tempelhofer Feld Sound Map</title>
+
+    <!-- Roboto Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+<div id="container">
+
+    <!-- MAP -->
+
+    <div id="map-wrapper">
+
+        <img src="assets/new-map.svg" id="map" alt="Tempelhofer Feld Sound Map">
+
+    <!-- Recording Point 1 -->
+    <div class="marker"
+             style="left: 64%; top: 41%;"
+             data-title="Recording Point 1"
+             data-description="Transition Zone, Mobility, Gathering"
+             data-morning="https://soundcloud.com/niklask-schaefer/260320_01x-18"
+             data-noon="https://soundcloud.com/niklask-schaefer/260226_01x-1"
+             data-evening="https://soundcloud.com/niklask-schaefer/260309_09x-13">
+    1
+</div>
+             
+            
+       
+
+        <!-- Recording Point 2 -->
+        <div class="marker"
+             style="left:54%; top:38%;"
+             data-title="Recording Point 2"
+             data-description="Quiet Zone, Non-Human Sound, Vegetation"
+             data-morning="https://soundcloud.com/niklask-schaefer/260304_04x-9"
+             data-noon="https://soundcloud.com/niklask-schaefer/260316_01x-14"
+             data-evening="https://soundcloud.com/niklask-schaefer/260318_04x-15">
+            2
+        </div>
+
+        <!-- Recording Point 3 -->
+        <div class="marker"
+             style="left:42%; top:33%;"
+             data-title="Recording Point 3"
+             data-description="Movement Corridor, Spatial Border,  Runway "
+             data-morning="https://soundcloud.com/niklask-schaefer/260304_02x-8"
+             data-noon="https://soundcloud.com/niklask-schaefer/260226_07x-2"
+             data-evening="https://soundcloud.com/niklask-schaefer/260318_05x-16">
+            3
+        </div>
+
+        <!-- Recording Point 4 -->
+        <div class="marker"
+             style="left:36%; top:50%;"
+             data-title="Recording Point 4"
+             data-description="Activity Zone, Bordering Infrastructure, Edge-Centre "
+             data-morning="https://soundcloud.com/niklask-schaefer/260320_04x-19"
+             data-noon="https://soundcloud.com/niklask-schaefer/260226_08x-3"
+             data-evening="https://soundcloud.com/niklask-schaefer/260309_03x-11">
+            4
+        </div>
+
+        <!-- Recording Point 5 -->
+        <div class="marker"
+             style="left:45%; top:52%;"
+             data-title="Recording Point 5"
+             data-description="Activity Zone, Movement Corridor, Runway"
+             data-morning="https://soundcloud.com/niklask-schaefer/260320_05x-20"
+             data-noon="https://soundcloud.com/niklask-schaefer/260226_09x-4"
+             data-evening="https://soundcloud.com/niklask-schaefer/260318_07x-17">
+            5
+        </div>
+
+        <!-- Recording Point 6 -->
+        <div class="marker"
+             style="left:59%; top:59%;"
+             data-title="Recording Point 6"
+             data-description="Activity Zone, Collective Leisure Practice, Gathering"
+             data-morning="https://soundcloud.com/niklask-schaefer/260304_01_int-7"
+             data-noon="https://soundcloud.com/niklask-schaefer/260226_10x-5"
+             data-evening="https://soundcloud.com/niklask-schaefer/260309_01x-10">
+            6
+        </div>
+
+        <!-- Recording Point 7 -->
+        <div class="marker"
+             style="left:63%; top:47%;"
+             data-title="Recording Point 7"
+             data-description="Gathering Zone, Voices, Coexistence"
+             data-morning="https://soundcloud.com/niklask-schaefer/260320_07x-21"
+             data-noon="https://soundcloud.com/niklask-schaefer/260226_11x-6"
+             data-evening="https://soundcloud.com/niklask-schaefer/260309_08x-12">
+            7
+        </div>
+
+    </div>
+
+
+
+    <!-- INFO PANEL -->
+<div id="panel">
+
+    <h2 id="main-title">
+        Tempelhofer Feld Sound Map
+    </h2>
+
+<p class="contact">
+    Niklas Schaefer<br>
+    Master Thesis<br>
+    Humboldt University of Berlin<br>
+<a href="mailto:niklas.schaefer@student.hu-berlin.de">
+    Contact
+</a>
+</p>
+
+
+    <p id="description">
+        Click a recording point on the map to listen to field recordings.
+    </p>
+
+<div id="audio-section" style="display:none;">
+
+    <h3 id="point-title"></h3>
+
+    <p id="point-description"></p>
+
+    <h3>Morning</h3>
+    <div id="morning-player-container"></div>
+
+    <h3>Noon</h3>
+    <div id="noon-player-container"></div>
+
+    <h3>Evening</h3>
+    <div id="evening-player-container"></div>
+
+</div>
+
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+
