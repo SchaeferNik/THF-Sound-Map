@@ -9,8 +9,7 @@ const eveningContainer = document.getElementById("evening-player-container");
 
 function createPlayer(url) {
     if (!url) {
-        console.warn("Missing track URL");
-        return "";
+        return `<p style="font-size:13px; color:#888; margin:4px 0 12px;">No recording available.</p>`;
     }
 
     const embedUrl =
@@ -19,14 +18,20 @@ function createPlayer(url) {
         "&color=%23343434&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=false";
 
     return `
-        <iframe
-            width="100%"
-            height="120"
-            scrolling="no"
-            frameborder="no"
-            allow="autoplay"
-            src="${embedUrl}">
-        </iframe>
+        <div style="position:relative;">
+            <iframe
+                width="100%"
+                height="120"
+                scrolling="no"
+                frameborder="no"
+                allow="autoplay"
+                src="${embedUrl}"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            </iframe>
+            <p style="display:none; font-size:13px; color:#888; margin:4px 0 12px;">
+                Player blocked by browser extension. Try disabling your ad blocker or open in a different browser.
+            </p>
+        </div>
     `;
 }
 
